@@ -1,1 +1,1 @@
-export const myProtectedPaths = ["/test(.*)", "/khajana(.*)"];
+export const myProtectedPaths = ["/(.*)", "/test(.*)", "/khajana(.*)"];
