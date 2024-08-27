@@ -4,6 +4,7 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { cn } from "@/lib/utils";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const font = Open_Sans({ subsets: ["latin"] });
 
@@ -29,7 +30,10 @@ export default function RootLayout({
             storageKey="connect-hub-theme"
             disableTransitionOnChange
           >
-            {children}
+            <div className="flex flex-row-reverse justify-between p-4 ">
+              <ModeToggle />
+              {children}
+            </div>
           </ThemeProvider>
         </body>
       </html>
